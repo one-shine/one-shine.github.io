@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GTO Lab — ローカルで動く、精度に正直なポーカーGTO学習アプリ（無料）</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a0c0b'/%3E%3Ctext x='16' y='24' font-size='22' text-anchor='middle' fill='%23d4af37'%3E%E2%99%A0%3C/text%3E%3C/svg%3E" />
+  <meta name="description" content="ブラウザで動く無料のポーカーGTO学習アプリ。ライブ卓・GTOレンジ・1ハンドソルバー・弱点分析・理論ライブラリ。局面ごとに『厳密ソルバー解』と『GTO近似』を正直に表示。データは端末内のみ・第三者送信ゼロ。" />
+
+  <!-- 内容確定まで検索除外（noindex）。SEO 公開は後で robots を index に変更する。 -->
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- OGP / Twitter（公開時に og:url/og:image を本番の絶対URLへ差し替え） -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="GTO Lab" />
+  <meta property="og:title" content="GTO Lab — 精度に正直なポーカーGTO学習アプリ（無料）" />
+  <meta property="og:description" content="ブラウザで動く無料のGTO学習アプリ。厳密ソルバー解とGTO近似を局面ごとに正直表示。完全ローカル動作。" />
+  <meta property="og:image" content="assets/shot-table.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="nav">
+    <div class="wrap">
+      <div class="brand"><span class="pip">&spades;</span> GTO LAB</div>
+      <nav class="nav-links">
+        <a class="lnk" href="#features">機能</a>
+        <a class="lnk" href="#honesty">精度について</a>
+        <a class="lnk" href="#faq">FAQ</a>
+      </nav>
+      <a class="btn btn-primary" href="https://one-shine.github.io/poker-gto/">無料で試す</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ヒーロー -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">6-MAX ノーリミットホールデム / GTO 学習</span>
+          <h1>ローカルで動く、<span class="hl">精度に正直な</span><br>ポーカーGTO学習アプリ。</h1>
+          <p class="lead">
+            ライブ卓でプレイしながら、最適戦略との差を学ぶ。レンジ・ソルバー・弱点分析・理論を1つに。
+            <strong>インストール不要・ブラウザで完結・無料。</strong>
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://one-shine.github.io/poker-gto/">今すぐ無料で試す →</a>
+            <a class="btn btn-ghost" href="#honesty">精度の考え方を見る</a>
+          </div>
+          <p class="note">※ 教育・学習用のシミュレーションです。実際の金銭の賭け・換金はありません。</p>
+          <div class="badges">
+            <span class="badge">完全ローカル・第三者送信ゼロ</span>
+            <span class="badge">オフライン動作（PWA）</span>
+            <span class="badge">日本語</span>
+            <span class="badge">色覚配慮</span>
+          </div>
+        </div>
+        <div class="shot"><img src="assets/shot-table.png" alt="GTO Lab のライブポーカーテーブル画面" width="1200" height="863" /></div>
+      </div>
+    </section>
+
+    <!-- 3つの価値 -->
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">WHY GTO LAB</span>
+          <h2>「正直さ」を強みにした学習ツール</h2>
+          <p>“全局面 GTO” を雑に謳いません。どこが厳密でどこが近似かを、はっきり示します。</p>
+        </div>
+        <div class="cards3">
+          <div class="vcard">
+            <div class="ic">🎯</div>
+            <h3>精度を偽らない</h3>
+            <p>局面ごとに「✓ 厳密ソルバー解」と「△ GTO近似」をバッジで区別。断定（GTO最適）は使いません。学ぶ側が信頼度を判断できます。</p>
+          </div>
+          <div class="vcard">
+            <div class="ic">🔒</div>
+            <h3>完全ローカル・無料</h3>
+            <p>計算もデータ保存もすべて端末内。学習履歴は外部に送りません。アカウント不要・課金なし・オフラインでも動きます。</p>
+          </div>
+          <div class="vcard">
+            <div class="ic">📚</div>
+            <h3>学びの導線が一体</h3>
+            <p>実戦コーチ（EV損失）・弱点分析・ドリル・理論ライブラリ・用語集。「なぜそのプレイか」を局面から辿れます。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 機能 -->
+    <section id="features">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">FEATURES</span>
+          <h2>学習に必要なものを、ひとつに</h2>
+        </div>
+
+        <div class="feature">
+          <div class="ftext">
+            <span class="eyebrow">RANGES</span>
+            <h3>全ポジションのGTOレンジを一目で</h3>
+            <p>13×13グリッドで各ポジションのオープン／ディフェンス／対3betレンジを、混合戦略の頻度比まで色分け表示。</p>
+            <ul>
+              <li>セルをタップで各行動の詳細頻度</li>
+              <li>レンジ比較・エクイティ分布の可視化</li>
+              <li>色だけに頼らない表示（R/C/M ラベル併記）</li>
+            </ul>
+          </div>
+          <div class="shot"><img src="assets/shot-ranges.png" alt="GTOレンジ表（13×13グリッド）" width="1200" height="863" /></div>
+        </div>
+
+        <div class="feature rev">
+          <div class="ftext">
+            <span class="eyebrow">SOLVER</span>
+            <h3>その1ハンドを「解析する」</h3>
+            <p>盤面・自分の2枚・状況をカードピッカーで設定し、おすすめプレイ（頻度）・勝率・ポットオッズを表示。リバーは自前CFRで求解します。</p>
+            <ul>
+              <li>52枚グリッドのタップ選択（手打ち不要）</li>
+              <li>解の出典（厳密／近似）を正直に明示</li>
+              <li>勝率・必要勝率・ポットオッズも併記</li>
+            </ul>
+          </div>
+          <div class="shot"><img src="assets/shot-solver.png" alt="ソルバー：カードピッカーで局面を設定" width="1200" height="863" /></div>
+        </div>
+
+        <div class="feature">
+          <div class="ftext">
+            <span class="eyebrow">THEORY &amp; COACH</span>
+            <h3>「なぜ」を学べる理論ライブラリ</h3>
+            <p>ポジション・レンジ・ポットオッズ・ボードテクスチャ…入門〜プロまでの概念を解説。プレイ後はコーチがEV損失で振り返り。</p>
+            <ul>
+              <li>用語集と相互リンク（その場で定義）</li>
+              <li>弱点分析 TOP3 → 関連理論・ドリルへ導線</li>
+              <li>押し引き・オッズ・ポストフロップのドリル</li>
+            </ul>
+          </div>
+          <div class="shot"><img src="assets/shot-honesty.png" alt="理論ライブラリ：このアプリのGTO精度の解説" width="1200" height="863" /></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 誠実さ -->
+    <section id="honesty" class="honesty">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">HONEST ACCURACY</span>
+          <h2>「GTO」とどこまで言えるか、正直に。</h2>
+          <p>同じアプリでも、局面によって解の確からしさは違います。本アプリはそれを隠さず表示します。</p>
+        </div>
+        <div class="acc-grid">
+          <div class="acc exact">
+            <div class="tag">✓ 厳密ソルバー解 ＝「GTO」と呼べる</div>
+            <h3>押し引き（短スタック）／ 代表フロップ</h3>
+            <p>2人の局面は一意の均衡が存在し、自前CFRで厳密に求解。完全解までの距離（exploitability）も測れます。</p>
+            <ul>
+              <li>プッシュ／フォールド（≤25BB）＝厳密 Nash</li>
+              <li>代表フロップのポストフロップ＝exploitability 0.02%（商用ソルバー水準）</li>
+            </ul>
+          </div>
+          <div class="acc approx">
+            <div class="tag">△ GTO理論準拠の近似 ＝「限りなく近いが GTO とは言わない」</div>
+            <h3>プリフロップ100BB のレンジ</h3>
+            <p>位置依存の構造を自前ソルバーで再現し、公開GTOチャートと一致する品質まで近づけています。ただし3人以上の局面は数学的に均衡の収束保証がなく、近さを測れません。</p>
+            <ul>
+              <li>多人数プリフロップは <em>商用ソルバーでも</em> 厳密GTOではなく高品質な近似</li>
+              <li>だから「GTO最適」とは断定せず「GTO近似」と表示</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3ステップ -->
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">HOW IT WORKS</span>
+          <h2>3ステップで始められる</h2>
+        </div>
+        <div class="steps">
+          <div class="step"><div class="n">1</div><h3>ブラウザで開く</h3><p>インストール不要。スマホは「ホーム画面に追加」でアプリ化も可能。</p></div>
+          <div class="step"><div class="n">2</div><h3>プレイ／局面を設定</h3><p>ライブ卓で打つか、レンジ・ソルバーで知りたい局面を選ぶ。</p></div>
+          <div class="step"><div class="n">3</div><h3>戦略とEVで学ぶ</h3><p>GTO戦略・EV損失・勝率を、信頼度バッジ付きで確認。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow">FAQ</span>
+          <h2>よくある質問</h2>
+        </div>
+        <div class="faq">
+          <details><summary>本当に無料ですか？</summary><p>はい。完全無料・広告なし・アカウント不要です。課金や有料プランはありません。</p></details>
+          <details><summary>インストールは必要ですか？</summary><p>不要です。ブラウザで開くだけで動きます。スマホ（Safari/Chrome）は「ホーム画面に追加」でアプリのように使え、オフラインでも動作します。</p></details>
+          <details><summary>学習データはどこに保存されますか？</summary><p>すべて端末内（ブラウザ）に保存され、外部サーバーには送りません。第三者送信ゼロの設計です（別端末への引き継ぎはJSON書き出し／読み込みで対応）。</p></details>
+          <details><summary>「GTO Wizard」「PokerSnowie」とは関係ありますか？</summary><p>無関係・非提携です（各社の商標）。本アプリのレンジ・解はすべて自社で生成／作成したオリジナルです。</p></details>
+          <details><summary>精度はどのくらいですか？</summary><p>局面で異なります。押し引きと代表フロップは厳密なソルバー解、プリフロップ100BBはGTO理論準拠の近似です。アプリ内で局面ごとに「✓厳密／△近似」を正直に表示します。</p></details>
+          <details><summary>どんな端末で動きますか？</summary><p>PC（Chrome/Edge/Safari）・スマホ（iPhone/Android）のモダンブラウザで動きます。UIは日本語です。</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 最終CTA -->
+    <section class="final">
+      <div class="wrap">
+        <div class="box">
+          <h2>今日から、GTOを「正直に」学ぶ。</h2>
+          <p>登録不要・無料・ブラウザで完結。まずは1ハンド打ってみてください。</p>
+          <a class="btn btn-primary" href="https://one-shine.github.io/poker-gto/">GTO Lab を無料で開く →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="row">
+        <div class="brand"><span class="pip">&spades;</span> GTO LAB</div>
+        <div><a href="https://one-shine.github.io/poker-gto/">アプリを開く</a></div>
+      </div>
+      <p class="legal" style="margin-top:18px;">
+        GTO Lab は 6-max ノーリミットホールデム（キャッシュ・100BB前提）の<strong>教育・学習用シミュレーション</strong>です。
+        実際の金銭の賭け・換金・賞金は一切ありません。
+        「GTO Wizard」「PokerSnowie」等は各社の商標であり、本アプリとは無関係・非提携です。
+        表示するレンジ・解はすべて自社生成／オリジナルです。
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
