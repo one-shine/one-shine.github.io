@@ -100,7 +100,8 @@ section { padding: 52px 0; }
   background: linear-gradient(180deg, var(--panel), var(--bg-2));
   border: 1px solid var(--line); border-radius: var(--radius); padding: 24px;
 }
-.vcard .ic { font-size: 24px; }
+.vcard .ic { display: inline-grid; place-items: center; width: 46px; height: 46px; border-radius: 12px; background: rgba(212, 175, 55, .1); border: 1px solid var(--line); color: var(--brass); }
+.vcard .ic svg { width: 24px; height: 24px; }
 .vcard h3 { font-size: 19px; margin: 12px 0 8px; }
 .vcard p { color: var(--muted); margin: 0; font-size: 15px; }
 
